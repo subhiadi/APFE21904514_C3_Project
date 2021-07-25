@@ -69,11 +69,16 @@ class RestaurantTest {
 
 	@Test
 	public void get_total_if_user_selected_multiple_items() {
-		assertEquals(388,restaurant.totalOrderValue());
+		assertEquals(388, restaurant.totalOrderValue(restaurant.getMenu()));
 	}
+
 	@Test
-	public void get_total_if_user_does_not_selected_multiple_items() {
-		assertEquals(0,restaurant.totalOrderValue());
+	public void get_total_if_user_does_not_selected_multiple_items() throws itemNotFoundException {
+
+		restaurant.removeFromMenu("Sweet corn soup");
+		restaurant.removeFromMenu("Vegetable lasagne");
+		assertEquals(0, restaurant.totalOrderValue(restaurant.getMenu()));
+
 	}
 
 	// <<<<<<<<<<<<<<<<<<<<<<<TDD test cases>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

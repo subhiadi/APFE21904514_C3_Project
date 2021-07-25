@@ -3,7 +3,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Restaurant {
+public class Restaurant  {
     private String name;
     private String location;
     public LocalTime openingTime;
@@ -71,9 +71,20 @@ public class Restaurant {
         return name;
     }
 
-	public Integer totalOrderValue() {
-		// TODO Auto-generated method stub
-		return null;
+	
+
+	public Integer totalOrderValue(List<Item> items) {
+             int sum =0;
+             if(items!=null) {
+            	 for(Item i : items) {
+             
+            		 sum += i.getprice();
+            	 }
+            	 
+             }
+	
+		return sum;
+		
 	}
 
 }
