@@ -65,4 +65,16 @@ class RestaurantTest {
 		restaurant.addToMenu("Vegetable lasagne", 269);
 	}
 	// <<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	// <<<<<<<<<<<<<<<<<<<<<<<TDD test cases>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+	@Test
+	public void get_total_if_user_selected_multiple_items() {
+		assertEquals(388,restaurant.totalOrderValue());
+	}
+	@Test
+	public void get_total_if_user_does_not_selected_multiple_items() {
+		assertEquals(0,restaurant.totalOrderValue());
+	}
+
+	// <<<<<<<<<<<<<<<<<<<<<<<TDD test cases>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

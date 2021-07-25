@@ -71,4 +71,9 @@ public class Restaurant {
         return name;
     }
 
+	public Integer totalOrderValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
